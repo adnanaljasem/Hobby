@@ -1,0 +1,454 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* made the default box sizing border-box instead of content-box,
+ now when i add padding e.g. it will be inculded within the max width and will not be added to it*/
+  text-decoration: none;
+  list-style: none; /* get rid of black bulets nav */
+}
+
+/* General styles */
+html {
+  scroll-behavior: smooth; /*when i click any link will take me smoothly to the destenation*/
+}
+body {
+  background: #fff;
+  color: #303030;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  line-height: 2.2;
+}
+
+section {
+  padding: 5em 2em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 2.5em;
+  background: #a0afad;
+  color: #303030;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-weight: 900;
+  transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* text styles */
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.25rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+
+/* styling titles and subtitles */
+.section__title {
+  margin-bottom: 0.25em;
+}
+
+.section__title--intro {
+  font-weight: 300;
+}
+
+/* to display my name (strong) in the next line */
+.section__title--intro strong {
+  display: block;
+}
+
+strong {
+  font-weight: 900;
+}
+
+.section__subtitle {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+  background: #a0afad;
+  color: #303030;
+  padding: 0.25em 1em;
+  font-family: "Source Code Pro", monospace;
+  margin-bottom: 1em;
+}
+
+.section__subtitle--work {
+  color: #a0afad;
+  font-weight: 900;
+  margin-bottom: 2em;
+}
+
+/* header */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: #a0afad;
+  width: 100%;
+}
+
+.logo-img {
+  max-width: 5rem;
+  max-height: 5rem;
+  border-radius: 50%;
+  flex-grow: 1; /*to align logo to left */
+}
+
+nav ul {
+  margin-right: 1rem;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 0.33rem;
+}
+label.logo {
+  color: white;
+  font-size: 2rem;
+  padding: 0 4rem;
+}
+
+nav ul li a {
+  color: #303030;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.nav__item:hover {
+  background: none;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+  opacity: 0.5;
+}
+
+.checkbtn {
+  font-size: 2rem;
+  color: white;
+  margin-right: 2.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+@media (max-width: 650px) {
+  nav ul li a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  .nav ul li {
+    padding-right: 3rem;
+  }
+  ul.nav__list {
+    text-align: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .checkbtn {
+    display: block;
+  }
+  /* ul.nav__list {
+    position: fixed; 
+    width: 100%;
+    height: 100vh; 
+    top: 80px;
+    left: 0;
+    text-align: center;
+    border: solid black 1px;
+  } */
+  nav ul li {
+    display: block;
+  }
+}
+
+/* 
+.nav {
+  position: fixed;
+  background: #303030;
+  color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  color: inherit;
+  font-weight: 900;
+  font-size: 2.25rem;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: #a0afad;
+} */
+
+/*  Intro section  */
+
+.intro {
+  position: relative;
+  /* Relative: Element will be postioned relative to its original position
+  (element will remain in normal document flow)
+  
+  Absolute: Element will be positioned relative to the closest positioned ancestor
+  (element will be removed from normal document)*/
+}
+
+.intro__img {
+  /* box-shadow 1.horizontal-offset(- to left) 2.vertical-offset 3.blur(cannot be -)  4.spread HERE WITHOUT(edditional untill blur starts) 5.color */
+  box-shadow: 0.25em 0.25em 0.75em gray;
+}
+
+.section__subtitle--intro {
+  display: inline-block; /* the width will be its size (content) in smaller screen*/
+}
+
+@media (min-width: 800px) {
+  .intro {
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-column-gap: 1rem;
+    /*https://www.youtube.com/watch?v=wcOyRx-V6Fo*/
+    grid-template-areas:
+      "img title"
+      "img subtitle";
+    grid-template-columns: min-content max-content;
+    /* min : my photo  max: the text in the left  */
+  }
+
+  .intro__img {
+    grid-area: img;
+    min-width: 350px;
+    position: relative;
+    z-index: 1; /* to make my photo above the subtitle*/
+  }
+
+  .section__subtitle--intro {
+    align-self: start;
+    grid-column: -1 / 1; /*to go underneeth my photo*/
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    /* left: -1.5em; no need for this?*/
+    /* width: calc(100% + 1.5em); */
+  }
+}
+
+/*  My services section  */
+
+.my-services {
+  background-color: #303030; /* in case no bg photo*/
+  background-image: url(./img/art1-background.jpg);
+  background-size: cover; /*to fit the whole div and never repeats itself*/
+  color: #fff;
+  text-align: center;
+}
+
+.section__title--services {
+  color: #a0afad;
+  position: relative; /*because i have pseude element that i want to put on it*/
+}
+
+/*pseudo element for the line unter "waht i do"*/
+.section__title--services::after {
+  content: "";
+  display: block;
+  width: 2em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: #fff;
+}
+
+.services {
+  margin-bottom: 4em;
+}
+
+.service {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-left: 1.5em;
+}
+
+@media (min-width: 800px) {
+  .services {
+    display: flex;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.about-me {
+  max-width: 1000px;
+  margin: 0 auto; /*to keep it centered*/
+}
+
+.about-me__img {
+  border-radius: 50%;
+  box-shadow: 0.25em 0.25em 0.75em gray;
+}
+
+@media (min-width: 600px) {
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 250px; /*fr : my main area px for my rouonded photo*/
+    grid-template-areas:
+      "title img" /*grid areas diclared next*/
+      "subtitle img"
+      "text img";
+    grid-column-gap: 2em;
+  }
+
+  .section__title--about {
+    grid-area: title;
+  }
+
+  .section__subtitle--about {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    position: relative;
+    left: -1em;
+    padding-left: 1em;
+    padding-right: 250px; /*width of img
+    to make sure that subtitle
+    will not under about me img*/
+  }
+
+  .about-me__img {
+    grid-area: img;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+/* My Work */
+
+.my-work {
+  background-color: #303030;
+  color: #fff;
+  text-align: center;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.portfolio__item {
+  background: #a0afad;
+  overflow: hidden; /* not overflowing over the other imgs (only its width when hover   )*/
+}
+
+.portfolio__img {
+  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+}
+
+.portfolio__item:focus {
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio__img:hover,
+.portfolio_item:focus .portfolio_img {
+  transform: scale(1.2);
+  opacity: 0.5;
+}
+
+/* footer */
+
+.footer {
+  background: #111;
+  color: #a0afad;
+  text-align: center;
+  padding: 2.5em 0;
+  font-size: 1.25rem;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer__link {
+  font-weight: 900;
+}
+
+.footer__link:hover {
+  opacity: 0.7;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 2em 0;
+  padding: 0;
+}
+
+.social-list__item {
+  margin: 0 0.5em;
+}
+
+.social-list__link {
+  padding: 0.5em;
+}
+.social-logo {
+  max-width: 50px;
+  border-radius: 50%;
+}
+.social-logo:hover {
+  opacity: 0.5;
+}
