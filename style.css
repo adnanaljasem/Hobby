@@ -163,6 +163,10 @@ nav ul li a {
   display: none;
 }
 @media (max-width: 650px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
   nav ul li a {
     font-size: 1.5rem;
     font-weight: bold;
