@@ -3,7 +3,7 @@
 *::after {
   box-sizing: border-box;
   /* made the default box sizing border-box instead of content-box,
- now when i add padding e.g. it will be inculded within the max width and will not be added to it*/
+ now when i add e.g. padding it will be inculded within the max width and will not be added to it*/
   text-decoration: none;
   list-style: none; /* get rid of black bulets nav */
 }
@@ -282,8 +282,6 @@ nav ul li a {
     grid-row: 2;
     text-align: right;
     position: relative;
-    /* left: -1.5em; no need for this?*/
-    /* width: calc(100% + 1.5em); */
   }
 }
 
@@ -393,18 +391,13 @@ nav ul li a {
 }
 
 .portfolio__img {
-  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
-}
-
-.portfolio__item:focus {
-  position: relative;
-  z-index: 2;
+  transition: transform 450ms ease-in-out;
 }
 
 .portfolio__img:hover,
-.portfolio_item:focus .portfolio_img {
+.portfolio_img {
   transform: scale(1.2);
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 /* footer */
