@@ -182,21 +182,13 @@ canceled
     margin-right: auto;
     margin-left: auto;
   }
-  canceled .checkbtn {
+  /* canceled .checkbtn {
     display: block;
-  }
+  } */
   ul.nav__list {
     display: none;
   } /*to hide nav list for mobiles */
-  /* ul.nav__list {
-    position: fixed; 
-    width: 100%;
-    height: 100vh; 
-    top: 80px;
-    left: 0;
-    text-align: center;
-    border: solid black 1px;
-  } */
+
   nav ul li {
     display: block;
   }
