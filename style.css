@@ -150,7 +150,8 @@ nav ul li a {
   transition: 0.5s;
   opacity: 0.5;
 }
-
+/* 
+canceled
 .checkbtn {
   font-size: 2rem;
   color: white;
@@ -161,7 +162,7 @@ nav ul li a {
 
 #check {
   display: none;
-}
+} */
 @media (max-width: 650px) {
   nav {
     flex-direction: column;
@@ -181,9 +182,12 @@ nav ul li a {
     margin-right: auto;
     margin-left: auto;
   }
-  .checkbtn {
+  canceled .checkbtn {
     display: block;
   }
+  ul.nav__list {
+    display: none;
+  } /*to hide nav list for mobiles */
   /* ul.nav__list {
     position: fixed; 
     width: 100%;
