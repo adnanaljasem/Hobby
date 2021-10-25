@@ -8,7 +8,7 @@
   list-style: none; /* get rid of black bulets nav */
 }
 
-/* General styles */
+/** General styles */
 html {
   scroll-behavior: smooth; /*when i click any link will take me smoothly to the destenation*/
 }
