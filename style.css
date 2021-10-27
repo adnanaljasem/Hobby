@@ -84,6 +84,7 @@ h3 {
 
 strong {
   font-weight: 900;
+  padding: 0.5em 0;
 }
 
 .section__subtitle {
@@ -263,7 +264,8 @@ nav ul li a {
   padding: 1rem;
   max-width: 500px;
   margin: 0 auto;
-  margin-left: 1.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 @media (min-width: 800px) {
