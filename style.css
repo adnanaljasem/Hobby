@@ -69,16 +69,16 @@ h3 {
 }
 
 /* styling titles and subtitles */
-.section__title {
+.section-title {
   margin-bottom: 0.25em;
 }
 
-.section__title--intro {
+.section-title-intro {
   font-weight: 300;
 }
 
 /* to display my name (strong) in the next line */
-.section__title--intro strong {
+.section-title-intro strong {
   display: block;
 }
 
@@ -87,13 +87,13 @@ strong {
   padding: 0.5em 0;
 }
 
-.section__subtitle {
+.section-subtitle {
   margin: 0;
   font-size: 1.25rem;
 }
 
-.section__subtitle--intro,
-.section__subtitle--about {
+.section-subtitle-intro,
+.section-subtitle-about {
   background: #a0afad;
   color: #303030;
   padding: 0.25em 1em;
@@ -101,7 +101,7 @@ strong {
   margin-bottom: 1em;
 }
 
-.section__subtitle--work {
+.section-subtitle-work {
   color: #a0afad;
   font-weight: 900;
   margin-bottom: 2em;
@@ -145,7 +145,7 @@ nav ul li a {
   font-weight: bold;
 }
 
-.nav__item:hover {
+.nav-item:hover {
   background: none;
   border-radius: 0.5rem;
   transition: 0.5s;
@@ -165,14 +165,14 @@ nav ul li a {
   .nav ul li {
     padding-right: 3rem;
   }
-  ul.nav__list {
+  ul.nav-list {
     text-align: center;
     display: block;
     margin-right: auto;
     margin-left: auto;
   }
 
-  ul.nav__list {
+  ul.nav-list {
     display: none;
   } /*to hide nav list for mobiles */
 
@@ -192,12 +192,12 @@ nav ul li a {
   (element will be removed from normal document)*/
 }
 
-.intro__img {
+.intro-img {
   /* box-shadow 1.horizontal-offset(- to left) 2.vertical-offset 3.blur(cannot be -)  4.spread HERE WITHOUT(edditional untill blur starts) 5.color */
   box-shadow: 0.25em 0.25em 0.75em gray;
 }
 
-.section__subtitle--intro {
+.section-subtitle-intro {
   display: inline-block; /* the width will be its size (content) in smaller screen*/
 }
 
@@ -215,14 +215,14 @@ nav ul li a {
     /* min : my photo  max: the text in the left  */
   }
 
-  .intro__img {
+  .intro-img {
     grid-area: img;
     min-width: 350px;
     position: relative;
     z-index: 1; /* to make my photo above the subtitle*/
   }
 
-  .section__subtitle--intro {
+  .section-subtitle-intro {
     align-self: start;
     grid-column: -1 / 1; /*to go underneeth my photo*/
     grid-row: 2;
@@ -241,13 +241,13 @@ nav ul li a {
   text-align: center;
 }
 
-.section__title--services {
+.section-title-services {
   color: #a0afad;
   position: relative; /*because i have pseude element that i want to put on it*/
 }
 
 /*pseudo element for the line unter "waht i do"*/
-.section__title--services::after {
+.section-title-services::after {
   content: "";
   display: block;
   width: 2em;
@@ -282,7 +282,7 @@ nav ul li a {
   margin: 0 auto; /*to keep it centered*/
 }
 
-.about-me__img {
+.about-me-img {
   border-radius: 50%;
   box-shadow: 0.25em 0.25em 0.75em gray;
 }
@@ -298,11 +298,11 @@ nav ul li a {
     grid-column-gap: 2em;
   }
 
-  .section__title--about {
+  .section-title-about {
     grid-area: title;
   }
 
-  .section__subtitle--about {
+  .section-subtitle-about {
     grid-column: 1 / -1;
     grid-row: 2;
     position: relative;
@@ -313,7 +313,7 @@ nav ul li a {
     will not under about me img*/
   }
 
-  .about-me__img {
+  .about-me-img {
     grid-area: img;
     position: relative;
     z-index: 2;
@@ -333,16 +333,16 @@ nav ul li a {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.portfolio__item {
+.portfolio-item {
   background: #a0afad;
   overflow: hidden; /* not overflowing over the other imgs (only its width when hover   )*/
 }
 
-.portfolio__img {
+.portfolio-img {
   transition: transform 450ms ease-in-out;
 }
 
-.portfolio__img:hover,
+.portfolio-img:hover,
 .portfolio_img {
   transform: scale(1.2);
   opacity: 0.5;
@@ -363,15 +363,15 @@ nav ul li a {
   text-decoration: none;
 }
 
-.footer__link {
+.footer-link {
   font-weight: 900;
 }
 
-.footer__link:hover {
+.footer-link:hover {
   opacity: 0.7;
 }
 
-.footer__link:hover {
+.footer-link:hover {
   text-decoration: underline;
 }
 
