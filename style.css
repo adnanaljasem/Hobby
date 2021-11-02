@@ -3,7 +3,7 @@
 *::after {
   box-sizing: border-box;
   /* made the default box sizing border-box instead of content-box,
- now when i add e.g. padding it will be inculded within the max width and will not be added to it*/
+ now when i add padding it will be inculded within the max width and will not be added to it*/
   text-decoration: none;
   list-style: none; /* get rid of black bulets nav */
 }
@@ -383,11 +383,11 @@ nav ul li a {
   padding: 0;
 }
 
-.social-list__item {
+.social-list-item {
   margin: 0 0.5em;
 }
 
-.social-list__link {
+.social-list-link {
   padding: 0.5em;
 }
 .social-logo {
