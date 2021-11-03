@@ -42,7 +42,7 @@ img {
   font-size: 0.8rem;
   letter-spacing: 2px;
   font-weight: 900;
-  transition: transform 200ms ease-in-out;
+  transition: transform 0.2s;
 }
 
 .btn:hover {
@@ -121,7 +121,6 @@ nav {
   max-width: 5rem;
   max-height: 5rem;
   border-radius: 50%;
-  flex-grow: 1; /*to align logo to left */
 }
 
 nav ul {
@@ -131,11 +130,6 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin: 0 0.33rem;
-}
-label.logo {
-  color: white;
-  font-size: 2rem;
-  padding: 0 4rem;
 }
 
 nav ul li a {
@@ -147,39 +141,17 @@ nav ul li a {
 }
 
 .nav-item:hover {
-  background: none;
-  border-radius: 0.5rem;
   transition: 0.5s;
   opacity: 0.5;
 }
 
 @media (max-width: 650px) {
   nav {
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
   }
-  nav ul li a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-  }
-  .nav ul li {
-    padding-right: 3rem;
-  }
-  ul.nav-list {
-    text-align: center;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
   ul.nav-list {
     display: none;
   } /*to hide nav list for mobiles */
-
-  nav ul li {
-    display: block;
-  }
 }
 
 /*  Intro section  */
@@ -221,7 +193,6 @@ nav ul li a {
   .intro-img {
     grid-area: img;
     min-width: 300px;
-    position: relative;
     z-index: 1; /* to make my photo above the subtitle*/
   }
 
@@ -229,8 +200,7 @@ nav ul li a {
     align-self: start; /*self because its the child of grid(align-items: start ). start to the right ..self we control only one child of grid */
     grid-column: -1 / 1; /*= grid column start=-1 and grid column end = 1 ..to go underneeth my photo*/
     grid-row: 2;
-    text-align: right;
-    position: relative;
+    text-align: right; /*otherwise the text will stay behind my photo*/
   }
 }
 
@@ -257,6 +227,7 @@ nav ul li a {
   height: 1px;
   margin: 0.5em auto 1em;
   background: #fff;
+  opacity: 0.3;
 }
 
 .services {
@@ -306,14 +277,11 @@ nav ul li a {
   }
 
   .section-subtitle-about {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    position: relative;
-    left: -1em;
-    padding-left: 1em;
+    grid-column: 1 / -1; /*to go underneeth my photo*/
+    grid-row: 2; /*pace it on 2nd row*/
     padding-right: 250px; /*width of img
     to make sure that subtitle
-    will not under about me img*/
+    will not go under about me img*/
   }
 
   .about-me-img {
@@ -339,11 +307,11 @@ nav ul li a {
 
 .portfolio-item {
   background: #a0afad;
-  overflow: hidden; /* not overflowing over the other imgs (only its width when hover )*/
+  overflow: hidden; /* not overflowing over the other imgs (only its width when hover)*/
 }
 
 .portfolio-img {
-  transition: transform 450ms ease-in-out;
+  transition: transform 0.4s ease;
 }
 
 .portfolio-img:hover,
@@ -363,7 +331,7 @@ nav ul li a {
 }
 
 .footer a {
-  color: inherit;
+  color: #a0afad;
   text-decoration: none;
 }
 
@@ -380,7 +348,7 @@ nav ul li a {
 }
 
 .social-list {
-  list-style: none;
+  list-style: none; /*get rid of the bulets*/
   display: flex;
   justify-content: center;
   margin: 2em 0;
