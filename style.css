@@ -226,8 +226,8 @@ nav ul li a {
   }
 
   .section-subtitle-intro {
-    align-self: start;
-    grid-column: -1 / 1; /*to go underneeth my photo*/
+    align-self: start; /*self because its the child of grid(align-items: start ). start to the right ..self we control only one child of grid */
+    grid-column: -1 / 1; /*= grid column start=-1 and grid column end = 1 ..to go underneeth my photo*/
     grid-row: 2;
     text-align: right;
     position: relative;
@@ -334,11 +334,12 @@ nav ul li a {
 .portfolio {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /*best for responsive galaries*/
 }
 
 .portfolio-item {
   background: #a0afad;
-  overflow: hidden; /* not overflowing over the other imgs (only its width when hover   )*/
+  overflow: hidden; /* not overflowing over the other imgs (only its width when hover )*/
 }
 
 .portfolio-img {
