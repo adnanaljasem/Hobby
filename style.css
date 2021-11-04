@@ -10,7 +10,7 @@
 
 /** General styles */
 html {
-  scroll-behavior: smooth; /*when i click any link will take me smoothly to the destenation*/
+  scroll-behavior: smooth;
 }
 body {
   background: #fff;
